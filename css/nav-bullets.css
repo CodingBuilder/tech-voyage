@@ -1,0 +1,60 @@
+.nav-bullets {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 50px;
+  height: fit-content;
+  z-index: 3;
+}
+
+.nav-bullets .bullet {
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 4px var(--mainColor) solid;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-bullets .bullet:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.nav-bullets .bullet .tooltip {
+  background-color: var(--mainColor);
+  color: white;
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 120px;
+  height: 30px;
+  padding: 1px 10px;
+  text-align: center;
+  line-height: 27px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  cursor: default;
+  pointer-events: none;
+}
+
+.nav-bullets .bullet:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-bullets .bullet .tooltip::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid;
+  border-color: transparent transparent transparent var(--mainColor);
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+}

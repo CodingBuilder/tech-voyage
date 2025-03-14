@@ -1,0 +1,137 @@
+.timeline {
+  padding: 60px;
+  background-color: #e1e1e1;
+}
+
+.timeline .timeline-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline .timeline-content:before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  margin: 0 auto;
+  background-color: var(--mainColor);
+}
+
+.timeline .timeline-content .year {
+  width: 60px;
+  height: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--mainColor);
+  text-align: center;
+  border-radius: 7px;
+  margin: 10px auto 0;
+}
+
+.timeline .timeline-content .left,
+.timeline .timeline-content .right {
+  background-color: white;
+  border-radius: 7px;
+  width: calc(50% - 35px);
+  padding: 10px 20px;
+  margin-top: 20px;
+  position: relative;
+}
+
+@media (max-width: 687px) {
+  .timeline .timeline-content .left,
+  .timeline .timeline-content .right {
+    width: 100%;
+  }
+}
+
+.timeline .timeline-content .left {
+  float: left;
+}
+
+.timeline .timeline-content .right {
+  float: right;
+}
+
+.timeline .timeline-content .left::before,
+.timeline .timeline-content .right::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+}
+
+@media (max-width: 687px) {
+  .timeline .timeline-content .left::before,
+  .timeline .timeline-content .right::before {
+    display: none;
+  }
+}
+
+.timeline .timeline-content .left::before {
+  right: -20px;
+  border-color: transparent transparent transparent white;
+}
+
+.timeline .timeline-content .right::before {
+  left: -20px;
+  border-color: transparent white transparent transparent;
+}
+
+.timeline .timeline-content .left::after,
+.timeline .timeline-content .right::after {
+  content: "";
+  background-color: white;
+  border: 3px var(--mainColor) solid;
+  border-radius: 50%;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 20px;
+}
+
+
+@media (max-width: 687px) {
+  .timeline .timeline-content .left::after,
+  .timeline .timeline-content .right::after {
+    display: none;
+  }
+}
+
+.timeline .timeline-content .left::after {
+  right: -46px;
+}
+.timeline .timeline-content .right::after {
+  left: -46px;
+}
+
+.timeline .timeline-content .content h3 {
+  font-weight: bold;
+  color: var(--mainColor);
+  font-size: 20px;
+}
+
+.timeline .timeline-content .content p {
+  line-height: 1.8;
+}
+
+@media (max-width: 335px) {
+  .timeline .timeline-content .content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 325px) {
+  .timeline .timeline-content .content p {
+    font-size: 13px;
+  }
+}
+
+.clear-fix {
+  clear: both;
+}

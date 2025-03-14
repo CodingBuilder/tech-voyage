@@ -1,0 +1,171 @@
+.setting-box {
+  width: 280px;
+  min-height: 100vh;
+  background-color: white;
+  position: fixed;
+  z-index: 100;
+  left: -280px;
+  transition: left 0.3s ease-in;
+}
+
+.setting-box.show {
+  left: 0;
+}
+
+.setting-box .icon {
+  position: absolute;
+  right: -34px;
+  top: calc(50% - 50px);
+  background-color: white;
+  font-size: 20px;
+  border-radius: 0 7px 7px 0;
+  cursor: pointer;
+}
+
+.setting-box .icon i {
+  width: 34px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.setting-box .container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100vh;
+  gap: 10px;
+}
+
+.setting-box .container .options {
+  background-color: #e1e1e1;
+  border-radius: 7px;
+  height: 100px;
+  padding: 13px;
+  width: 100%;
+}
+
+.setting-box .container .options h4{
+  font-size: 19px;
+  color: var(--textColor);
+  text-align: center;
+  margin: 0;
+}
+
+.setting-box .container .options .colors-list{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+}
+
+.setting-box .container .options .colors-list li {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  column-gap: 24px;
+  border: 2px transparent solid;
+}
+
+.setting-box .container .options .colors-list li:hover {
+  opacity: 1;
+}
+
+.setting-box .container .options .colors-list li:first-child {
+  background-color: rgb(7, 184, 110);
+}
+
+.setting-box .container .options .colors-list li:nth-child(2) {
+  background-color: rgb(255 165 0);
+}
+
+.setting-box .container .options .colors-list li:nth-child(3) {
+  background-color: rgb(21 185 178);
+}
+
+.setting-box .container .options .colors-list li:nth-child(4) {
+  background-color: rgb(83 37 173);
+}
+
+.setting-box .container .options .colors-list li:nth-child(5) {
+  background-color: rgb(227 7 88);
+}
+
+.setting-box .container .options .colors-list li:last-child {
+  background-color: rgb(43 55 47);
+}
+
+.setting-box .container .options .colors-list li.active {
+  opacity: 1;
+  border-color: white;
+}
+
+.setting-box .container .options .action, .setting-box .container .options .bullets-action {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.setting-box .container .options button {
+  width: 100px;
+  border-radius: 7px;
+  opacity: 0.5;
+}
+
+.setting-box .container .options button:hover {
+  opacity: 1;
+}
+
+.setting-box .container .options button.active {
+  opacity: 1;
+}
+
+.setting-box .container .options:nth-child(3) {
+  height: fit-content;
+}
+
+.setting-box .container .options .fonts-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.setting-box .container .options .fonts-list li {
+  display: flex;
+  gap: 8px;
+}
+
+.setting-box .container .options .fonts-list li button {
+  font-size: 15px;
+  width: 70px;
+  height: 40px;
+}
+
+.setting-box .container .options .fonts-list li:first-child button {
+  width: 100px;
+}
+
+.setting-box .container .options .fonts-list li:last-child button:first-child {
+  font-size: 11px;
+}
+
+.reset {
+  width: 100%;
+  background-color: orangered;
+  border-radius: 7px;
+  opacity: 1;
+}
+
+.reset:hover {
+  background-color: red;
+}

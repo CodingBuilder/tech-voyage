@@ -1,0 +1,36 @@
+.about {
+  padding: 60px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+@media (max-width: 1087px) {
+  .about {
+    flex-direction: column;
+  }
+}
+
+.about .description h2 {
+  color: var(--mainColor);
+}
+
+.about .description p {
+  color: rgb(43, 55, 47);
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.about img {
+  width: 400px;
+  height: 400px;
+}
+
+@media (max-width: 440px) {
+  .about img {
+    width: 325px;
+    height: 325px;
+}
+}

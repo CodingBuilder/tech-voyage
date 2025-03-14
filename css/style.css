@@ -1,0 +1,64 @@
+:root {
+  --mainColor: rgb(7, 184, 110);
+  --textColor: #666;
+  scroll-behavior: smooth;
+  scrollbar-color: var(--mainColor) black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+button {
+  background-color: var(--mainColor);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  width: 140px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  user-select: none;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.up {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--mainColor);
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.up.show {
+  opacity: 1;
+  visibility: visible;
+}

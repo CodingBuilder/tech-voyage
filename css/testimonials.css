@@ -1,0 +1,119 @@
+.testimonials {
+  padding: 50px 60px;
+  background-image: linear-gradient(to right, var(--mainColor) 50%, rgb(43 55 47) 50%);
+  height: 640px;
+}
+
+@media (max-width: 1092px) {
+  .testimonials {
+    height: 725px;
+  }
+}
+
+@media (max-width: 950px) {
+  .testimonials {
+    height: 880px;
+  }
+}
+
+@media (max-width: 785px) {
+  .testimonials {
+    height: 1650px;
+  }
+}
+
+@media (max-width: 547px) {
+  .testimonials {
+    height: 1780px;
+  }
+}
+
+@media (max-width: 449px) {
+  .testimonials {
+    height: 1910px;
+  }
+}
+
+@media (max-width: 376px) {
+  .testimonials {
+    height: 2090px;
+  }
+}
+
+@media (max-width: 339px) {
+  .testimonials {
+    height: 2200px;
+  }
+}
+
+.testimonials h2{
+  font-size: 30px;
+  color: white;
+}
+
+.testimonials .container:not(:first-of-type) {
+  margin-top: 10px;
+}
+
+.testimonials .container .te-box {
+  float: left;
+  background-color: white;
+  width: calc(98% / 3);
+  padding: 10px 20px 30px;
+  border-radius: 7px;
+}
+
+@media (max-width: 785px) {
+  .testimonials .container .te-box {
+    width: 100%;
+  }
+  .testimonials .container .te-box:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}
+
+.testimonials .container .te-box:not(:last-of-type) {
+  margin-right: 1%;
+}
+
+.testimonials .container .te-box > p {
+  line-height: 1.8;
+  color: rgb(0 0 0 / 54%);
+  margin-bottom: 15px;
+}
+
+.testimonials .container .te-box .person-info{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+@media (max-width: 950px) {
+  .testimonials .container .te-box .person-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.testimonials .container .te-box .person-info .avatar{
+  border-radius: 50%;
+}
+
+.testimonials .container .te-box .person-info h4 {
+  margin: 0 0 3px;
+  color: var(--mainColor);
+}
+
+.testimonials .container .te-box .person-info p {
+  margin: 0;
+  font-weight: bold;
+  color: rgb(0 0 0 / 54%);
+}
+
+.testimonials .container .te-box .person-info div {
+  margin-top: 4px;
+}
+
+.testimonials .container .te-box .person-info div i {
+  color: gold;
+}
